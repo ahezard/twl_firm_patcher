@@ -28,13 +28,7 @@ python ..\scripts\build_twlbg_code_from_dev_launcher_srl.py --srl=devSRLlauncher
 
 ..\tools\3dstool.exe -czvtf exefs twlBg_patched.exefs --header twlBg.exefs.header --exefs-dir twlBg_patched_exefs
 
-..\tools\3dstool.exe -cvtf cxi twlBg_patched.cxi --header twlBg.ncch.header --exh twlBg.exheader.bin --exefs twlBg_patched.exefs
-
-cp twlBg_patched.cxi ..\twlBg.cxi
-
-cp twlBg_patched.cxi firm/firm_0_18000000.bin 
-
-..\tools\ctrtool.exe -it firm patched_firmware_twl.bin 
+..\tools\3dstool.exe -cvtf cxi ..\twlBg.cxi --header twlBg.ncch.header --exh twlBg.exheader.bin --exefs twlBg_patched.exefs
 
 cd ..\scripts
 pause
