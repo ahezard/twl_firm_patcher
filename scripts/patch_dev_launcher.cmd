@@ -19,5 +19,22 @@ python ..\scripts\extract_dev_launcher_srl_from_twlbg_cxi.py --cxi twlBg_origina
 
 python ..\scripts\patchDevLauncher.py --srl devSRLlauncher_original_dec.nds --out devSRLlauncher_patched_dec.nds
 
+copy devSRLlauncher_patched_dec.nds devSRLlauncher_patched_enc.nds
+..\tools\TWLTool.exe modcrypt --in %1 devSRLlauncher_patched_enc.nds
+
+mkdir twlBg_patched_exefs 
+
+python ..\scripts\build_twlbg_code_from_dev_launcher_srl.py --srl=devSRLlauncher_patched_enc.nds --code=twlBg_original_exefs\code.bin --out=twlBg_patched_exefs\code.bin 
+
+..\tools\3dstool.exe -czvtf exefs twlBg_patched.exefs --header twlBg.exefs.header --exefs-dir twlBg_patched_exefs
+
+..\tools\3dstool.exe -cvtf cxi twlBg_patched.cxi --header twlBg.ncch.header --exh twlBg.exheader.bin --exefs twlBg_patched.exefs
+
+cp twlBg_patched.cxi ..\twlBg.cxi
+
+cp twlBg_patched.cxi firm/firm_0_18000000.bin 
+
+..\tools\ctrtool.exe -it firm patched_firmware_twl.bin 
+
 cd ..\scripts
 pause

@@ -1,2 +1,0 @@
-copy devSRLlauncher_patched_dec.nds devSRLlauncher_patched_enc.nds
-Modcrypt.bat devSRLlauncher_patched_enc.nds
