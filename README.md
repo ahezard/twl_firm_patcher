@@ -6,6 +6,10 @@ This modifed twlBg.cxi allows to unlock part of the TWL mode Hardware (DSI) into
 
 The main advantage available is the capability to boost arm9 speed (from 66 mhz to 133 mhz) without breaking NTR games.
 
+Usage :
+- put firmware_twl.bin (O3DS or N3DS) into input
+- run go.cmd
+
 Here is the details of the patch implemented :
 
 The idea is to replace all STR operation on the register 0x4004008 by STRH (only affect bit 1-16 leaving bit 16-32 untouched)
