@@ -17,5 +17,7 @@ python ..\scripts\extract_dev_launcher_srl_from_twlbg_cxi.py --cxi twlBg_origina
 
 ..\tools\ndstool.exe -x -9 devSRLlauncher_original_dec.arm9 -7 devSRLlauncher_original_dec.arm7 devSRLlauncher_original_dec.nds
 
+python ..\scripts\patchDevLauncher.py --srl devSRLlauncher_original_dec.nds --out devSRLlauncher_patched_dec.nds
+
 cd ..\scripts
 pause
