@@ -128,6 +128,27 @@ files.read(4)
 filew.write("\xB0\x00\xC2\xE1")
 current=srlsizeoffset+4
 
+# 5th patch
+srlsizeoffset=0xA6250
+skipUntilAddress(files,filew,current,srlsizeoffset)
+files.read(4)
+filew.write("\xB0\x00\xC2\x11")
+current=srlsizeoffset+4
+
+# 6th patch
+srlsizeoffset=0xA6278
+skipUntilAddress(files,filew,current,srlsizeoffset)
+files.read(4)
+filew.write("\xB4\x00\xC2\xE1")
+current=srlsizeoffset+4
+
+# 7th patch
+srlsizeoffset=0xA6298
+skipUntilAddress(files,filew,current,srlsizeoffset)
+files.read(4)
+filew.write("\xB0\x10\xC2\xE1")
+current=srlsizeoffset+4
+
 skipUntilAddress(files,filew,current,filesize)
 
 filew.close()
