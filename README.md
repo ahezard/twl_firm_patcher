@@ -12,6 +12,7 @@ Usage :
 - put the twlBg.cxi file into luma/sysmodules (V6.0 dev version required)
 - an "enabler" program is needed to unlock the HW. 
 
+Here are some example of enabler programs : 
 - https://github.com/ahezard/ntr_extended__poc
 - https://github.com/ahezard/woodrpg_forwarder
 
