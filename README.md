@@ -10,11 +10,14 @@ Usage :
 - put firmware_twl.bin (O3DS or N3DS) into input
 - run go.cmd
 - put the twlBg.cxi file into luma/sysmodules (V6.0 dev version required)
-- an "enabler" program is needed to unlock the HW. Here is an example : https://github.com/ahezard/ntr_extended__poc
+- an "enabler" program is needed to unlock the HW. 
 
-Here is the details of the patch implemented :
+- https://github.com/ahezard/ntr_extended__poc
+- https://github.com/ahezard/woodrpg_forwarder
 
-The idea is to replace all STR operation on the register 0x4004008 by STRH (only affect bit 1-16 leaving bit 16-32 untouched)
+Here are the details of the patches implemented :
+
+The idea is to replace all STR operations on the register 0x4004008 by STRH (only affect bit 1-16 leaving bit 16-32 untouched)
 
 In devLauncher SRL :
 
