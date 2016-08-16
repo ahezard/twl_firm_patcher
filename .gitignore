@@ -1,2 +1,10 @@
 input/patched_firmware_twl.bin
 input/firmware_twl.bin
+*.bin
+*.exefs
+*.txt
+*.cxi
+*.arm7
+*.arm9
+*.nds
+*.header

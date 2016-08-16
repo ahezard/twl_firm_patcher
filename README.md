@@ -9,6 +9,8 @@ The main advantage available is the capability to boost arm9 speed (from 66 mhz 
 Usage :
 - put firmware_twl.bin (O3DS or N3DS) into input
 - run go.cmd
+- put the twlBg.cxi file into luma/sysmodules (V6.0 dev version required)
+- an "enabler" program is needed to unlock the HW. I will release an example soon.
 
 Here is the details of the patch implemented :
 
