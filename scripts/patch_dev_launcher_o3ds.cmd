@@ -9,7 +9,7 @@ pause
 
 ..\tools\3dstool.exe -xuvtf exefs twlBg.exefs --header twlBg.exefs.header --exefs-dir twlBg_original_exefs
 
-python ..\scripts\extract_dev_launcher_srl_from_twlbg_cxi.py --cxi twlBg_original_exefs/code.bin --out devSRLlauncher_original_enc.nds
+python ..\scripts\extract_dev_launcher_srl_from_twlbg_cxi_o3ds.py --cxi twlBg_original_exefs/code.bin --out devSRLlauncher_original_enc.nds
 
 ..\tools\twltool.exe modcrypt --in devSRLlauncher_original_enc.nds --out devSRLlauncher_original_dec.nds
 
