@@ -10,7 +10,7 @@ Usage :
 - put firmware_twl.bin (O3DS or N3DS) into input
 - run go.cmd
 - put the twlBg.cxi file into luma/sysmodules (V6.0 dev version required)
-- an "enabler" program is needed to unlock the HW. I will release an example soon.
+- an "enabler" program is needed to unlock the HW. Here is an example : https://github.com/ahezard/ntr_extended__poc
 
 Here is the details of the patch implemented :
 
