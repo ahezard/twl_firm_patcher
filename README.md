@@ -15,6 +15,7 @@ Here is the details of the patch implemented :
 The idea is to replace all STR operation on the register 0x4004008 by STRH (only affect bit 1-16 leaving bit 16-32 untouched)
 
 In devLauncher SRL :
+
 ARM9 section
 - offset 0x07368 replace 08 60 87 05 by B8 60 C7 01
 - offset 0x2A180 replace 00 00 81 E5 by B0 00 C1 E1
