@@ -104,28 +104,28 @@ filesize=getSize(files)
 srlsizeoffset=0x07368
 skipUntilAddress(files,filew,0,srlsizeoffset)
 files.read(4)
-filew.write("\B8\60\C7\01")
+filew.write("\xB8\x60\xC7\x01")
 current=srlsizeoffset+4
 
 # 2nd patch
 srlsizeoffset=0x2A180
 skipUntilAddress(files,filew,current,srlsizeoffset)
 files.read(4)
-filew.write("\B0\00\C1\E1")
+filew.write("\xB0\x00\xC1\xE1")
 current=srlsizeoffset+4
 
 # 3rd patch
 srlsizeoffset=0xA61EC
 skipUntilAddress(files,filew,current,srlsizeoffset)
 files.read(4)
-filew.write("\B0\00\C5\E1")
+filew.write("\xB0\x00\xC5\xE1")
 current=srlsizeoffset+4
 
 # 4th patch
 srlsizeoffset=0xA6244
 skipUntilAddress(files,filew,current,srlsizeoffset)
 files.read(4)
-filew.write("\B0\00\C2\E1")
+filew.write("\xB0\x00\xC2\xE1")
 current=srlsizeoffset+4
 
 skipUntilAddress(files,filew,current,filesize)
