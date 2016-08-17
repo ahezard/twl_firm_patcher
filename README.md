@@ -7,7 +7,15 @@ This modifed twlBg.cxi allows to unlock part of the TWL mode Hardware (DSI) into
 The main advantage available is the capability to boost arm9 speed (from 66 mhz to 133 mhz) without breaking NTR games.
 
 Usage :
-- put firmware_twl.bin (O3DS or N3DS) into input
+- Download the twl_firm of your console
+
+Old 3DS TWL_FIRM (Firmware for DS/DSi games):
+firm: http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000102/00000016
+
+New 3DS TWL_FIRM (Firmware for DS/DSi games):
+firm: http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013820000102/00000000
+
+- rename it to firmware_twl.bin and put it into input.
 - run go.cmd
 - put the twlBg.cxi file into luma/sysmodules (V6.0 dev version required)
 - an "enabler" program is needed to unlock the HW. 
