@@ -25,7 +25,8 @@ The idea is to replace all STR operations on the register 0x4004008 by STRH (onl
 In devLauncher SRL :
 
 ARM9 section (0x004000-0x02A000)
-- offset 0x07368 replace 08 60 87 05 by B8 60 C7 01  
+- offset 0x07368 replace 08 60 87 05 by B8 60 C7 01 
+(Only this patch is really effective and needed, the other patches only change slightly the value of the 0x4004008 in ARM9 from 83000000 to 82000000)   
 
 ARM7 section (0x02A000-0x034888)
 - offset 0x2A180 replace 00 00 81 E5 by B0 00 C1 E1

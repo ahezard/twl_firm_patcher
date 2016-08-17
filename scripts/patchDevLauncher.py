@@ -107,47 +107,82 @@ files.read(4)
 filew.write("\xB8\x60\xC7\x01")
 current=srlsizeoffset+4
 
+# TEST 1 whitesceen
+#srlsizeoffset=0x078EE
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\x19\x88\x9A\x1C")
+#current=srlsizeoffset+4
+
+# TEST 2 whitesceen
+#srlsizeoffset=0x13C66
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\x10\x88\x9A\x1C")
+#current=srlsizeoffset+4
+
+# TEST 3 white screen
+#srlsizeoffset=0x2A150
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\x29\x00\x00\xEB")
+#current=srlsizeoffset+4
+
 # 2nd patch
-srlsizeoffset=0x2A180
-skipUntilAddress(files,filew,current,srlsizeoffset)
-files.read(4)
-filew.write("\xB0\x00\xC1\xE1")
-current=srlsizeoffset+4
+#srlsizeoffset=0x2A180
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\xB0\x00\xC1\xE1")
+#current=srlsizeoffset+4
 
 # 3rd patch
-srlsizeoffset=0xA61EC
-skipUntilAddress(files,filew,current,srlsizeoffset)
-files.read(4)
-filew.write("\xB0\x00\xC5\xE1")
-current=srlsizeoffset+4
+#srlsizeoffset=0xA61EC
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\xB0\x00\xC5\xE1")
+#current=srlsizeoffset+4
+
+#TEST => NO EFFECT
+#srlsizeoffset=0xA6224
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\x01\x00\xA0\x03")
+#current=srlsizeoffset+4
 
 # 4th patch
-srlsizeoffset=0xA6244
-skipUntilAddress(files,filew,current,srlsizeoffset)
-files.read(4)
-filew.write("\xB0\x00\xC2\xE1")
-current=srlsizeoffset+4
+#srlsizeoffset=0xA6244
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\xB0\x00\xC2\xE1")
+#current=srlsizeoffset+4
 
 # 5th patch
-srlsizeoffset=0xA6250
-skipUntilAddress(files,filew,current,srlsizeoffset)
-files.read(4)
-filew.write("\xB0\x00\xC2\x11")
-current=srlsizeoffset+4
+#srlsizeoffset=0xA6250
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\xB0\x00\xC2\x11")
+#current=srlsizeoffset+4
 
 # 6th patch
-srlsizeoffset=0xA6278
-skipUntilAddress(files,filew,current,srlsizeoffset)
-files.read(4)
-filew.write("\xB4\x00\xC2\xE1")
-current=srlsizeoffset+4
+#srlsizeoffset=0xA6278
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\xB4\x00\xC2\xE1")
+#current=srlsizeoffset+4
+
+#TEST (in place of 7th) => NO EFFECT
+#srlsizeoffset=0xA6294 
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\xFF\x14\x81\xE3")
+#current=srlsizeoffset+4
 
 # 7th patch
-srlsizeoffset=0xA6298
-skipUntilAddress(files,filew,current,srlsizeoffset)
-files.read(4)
-filew.write("\xB0\x10\xC2\xE1")
-current=srlsizeoffset+4
+#srlsizeoffset=0xA6298
+#skipUntilAddress(files,filew,current,srlsizeoffset)
+#files.read(4)
+#filew.write("\xB0\x10\xC2\xE1")
+#current=srlsizeoffset+4
 
 skipUntilAddress(files,filew,current,filesize)
 
