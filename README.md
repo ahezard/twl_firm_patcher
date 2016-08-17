@@ -16,17 +16,23 @@ Here are some example of enabler programs :
 - https://github.com/ahezard/ntr_extended__poc
 - https://github.com/ahezard/woodrpg_forwarder
 
+Limitation : only the arm9 is unlocked, the arm7 appears to be still locked in NTR mode
+
 Here are the details of the patches implemented :
 
 The idea is to replace all STR operations on the register 0x4004008 by STRH (only affect bit 1-16 leaving bit 16-32 untouched)
 
 In devLauncher SRL :
 
-ARM9 section
-- offset 0x07368 replace 08 60 87 05 by B8 60 C7 01
+ARM9 section (0x004000-0x02A000)
+- offset 0x07368 replace 08 60 87 05 by B8 60 C7 01  
+
+ARM7 section (0x02A000-0x034888)
 - offset 0x2A180 replace 00 00 81 E5 by B0 00 C1 E1
 
-ARM7 section
+ARM9i section (0x055C00-0x059C00)
+
+ARM7i section (0x059C00-0x05F550)
 - offset 0xA61EC replace 00 00 85 E5 by B0 00 C5 E1
 - offset 0xA6244 replace 00 00 82 E5 by B0 00 C2 E1
 - offset 0xA6250 replace 00 00 82 15 by B0 00 C2 11
