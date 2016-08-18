@@ -33,7 +33,7 @@ ARM7 section (0x02A000-0x034888)
 
 ARM9i section (0x055C00-0x059C00)
 
-ARM7i section (0x059C00-0x05F550)
+ARM7i section (0x059C00-0x0B9150)
 - offset OxA5888 replace 02 01 1A E3 08 60 87 05 by 08 62 86 E3 08 60 87 E5
 
 All of this started from a Normatt theory so special thanks to him for the idea behind :
