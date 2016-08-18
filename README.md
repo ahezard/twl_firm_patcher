@@ -18,6 +18,7 @@ Usage :
 Here are some example of enabler programs : 
 - https://github.com/ahezard/ntr_extended__poc
 - https://github.com/ahezard/woodrpg_forwarder
+- https://github.com/ahezard/wood3ds
 
 Here are the details of the patches implemented :
 
