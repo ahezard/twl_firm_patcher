@@ -6,7 +6,7 @@ This modifed twlBg.cxi allows to unlock the TWL mode Hardware (DSI) into the NTR
 
 This unlock new capability in NTR mode without breaking games:
 -  boost arm9 speed (from 66 mhz to 133 mhz) : bit 1 of register 0x4004004 in ARM9 
--  SD access                                 : bit 1 of register 0x4004004 in ARM7 
+-  SD access                                 : bit 1 of register 0x4004004 in ARM7 +  bit ? of register 0x4004008 (value 0x830F0100 works)
 
 Usage :
 - Dump the twl_firm of your console using decrypt9 (SysNAND Options->Miscellanous->NCCH FIRMs Dump)
@@ -43,4 +43,6 @@ All of this started from a Normatt theory so special thanks to him for the idea 
 Thanks again to Normatt for the ARM7 patch.
 
 Thanks as well to Apache Thunder and Shutterbug2000 for the testing and hacking support.
+
+Thanks to Nocash and Steveice10 for their reverse engineering work and the documentation produced.
  
