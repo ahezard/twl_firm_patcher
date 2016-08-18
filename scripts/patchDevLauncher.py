@@ -100,14 +100,14 @@ filew = open(args.out, "wb")
 
 filesize=getSize(files)
 
-# 1st patch : ARM9 unlock
+# 1st patch : ARM9 SCFG unlock
 srlsizeoffset=0x07368
 skipUntilAddress(files,filew,0,srlsizeoffset)
 files.read(4)
 filew.write("\xB8\x60\xC7\x01")
 current=srlsizeoffset+4
 
-# 2nd patch : ARM7 unlock
+# 2nd patch : ARM7 SCFG unlock
 srlsizeoffset=0xA5888
 skipUntilAddress(files,filew,current,srlsizeoffset)
 files.read(8)

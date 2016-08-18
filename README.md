@@ -4,8 +4,9 @@ This patcher that allows to produce a special twlBg.cxi by patching the devLaunc
 
 This modifed twlBg.cxi allows to unlock the TWL mode Hardware (DSI) into the NTR mode (DS)
 
-This unlock new capabilitys in NTR mode without breaking games:
--  boost arm9 speed (from 66 mhz to 133 mhz)
+This unlock new capability in NTR mode without breaking games:
+-  boost arm9 speed (from 66 mhz to 133 mhz) : bit 1 of register 0x4004004 in ARM9 
+-  SD access                                 : bit 1 of register 0x4004004 in ARM7 
 
 Usage :
 - Dump the twl_firm of your console using decrypt9 (SysNAND Options->Miscellanous->NCCH FIRMs Dump)
@@ -18,8 +19,6 @@ Here are some example of enabler programs :
 - https://github.com/ahezard/ntr_extended__poc
 - https://github.com/ahezard/woodrpg_forwarder
 
-Limitation : only the arm9 is unlocked, the arm7 appears to be still locked in NTR mode
-
 Here are the details of the patches implemented :
 
 The idea is to replace all STR operations on the register 0x4004008 by STRH (only affect bit 1-16 leaving bit 16-32 untouched)
@@ -27,14 +26,14 @@ The idea is to replace all STR operations on the register 0x4004008 by STRH (onl
 In devLauncher SRL :
 
 ARM9 section (0x004000-0x02A000)
-- offset 0x07368 replace 08 60 87 05 by B8 60 C7 01 
+- offset 0x07368 replace 08 60 87 05 by B8 60 C7 01 (ARM7 SCFG unlock)
 
 ARM7 section (0x02A000-0x034888)
 
 ARM9i section (0x055C00-0x059C00)
 
 ARM7i section (0x059C00-0x0B9150)
-- offset OxA5888 replace 02 01 1A E3 08 60 87 05 by 08 62 86 E3 08 60 87 E5
+- offset 0xA5888 replace 02 01 1A E3 08 60 87 05 by 08 62 86 E3 08 60 87 E5 (ARM7 SCFG unlock)
 
 All of this started from a Normatt theory so special thanks to him for the idea behind :
 - [9:26:23 PM] Normmatt: 4004008h - DSi9 - SCFG_EXT - Extended Features (R/W) [8307F100h]
