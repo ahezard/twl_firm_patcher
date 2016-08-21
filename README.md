@@ -2,6 +2,8 @@
 
 This patcher that allows to produce a special twlBg.cxi by patching the devLauncher SRL contained into it.
 
+Python 2.7 and devKitPro (msys) are required and needs to be available in the Path.
+
 This modifed twlBg.cxi allows to unlock the TWL mode Hardware (DSI) into the NTR mode (DS)
 
 This unlock new capability in NTR mode without breaking games:
@@ -25,6 +27,7 @@ Here are some example of enabler programs :
 - https://github.com/ahezard/woodrpg_forwarder
 - https://github.com/ahezard/wood3ds
 - https://github.com/ApacheThunder/NTR_Launcher
+- https://github.com/shutterbug2000/NitroHax
 
 Here are the details of the patches implemented :
 
