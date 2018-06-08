@@ -2,12 +2,17 @@
 cd ../temp
 ..\tools\ctrtool.exe -xt firm --firmdir firm firmware_twl.bin 
 cp firm/firm_0_18000000.bin twlBg_original.cxi
+cp firm/firm_3_08006000.bin process9_original.cxi
 
 pause
 
 ..\tools\3dstool.exe -xvtf cxi twlBg_original.cxi --header twlBg.ncch.header --exh twlBg.exheader.bin --exefs twlBg.exefs
 
+..\tools\3dstool.exe -xvtf cxi process9_original.cxi --header process9.ncch.header --exh process9.exheader.bin --exefs process9.exefs
+
 ..\tools\3dstool.exe -xuvtf exefs twlBg.exefs --header twlBg.exefs.header --exefs-dir twlBg_original_exefs
+
+..\tools\3dstool.exe -xuvtf exefs process9.exefs--header process9.exefs.header --exefs-dir process9_original_exefs
 
 python ..\scripts\extract_dev_launcher_srl_from_twlbg_cxi_o3ds.py --cxi twlBg_original_exefs/code.bin --out devSRLlauncher_original_enc.nds
 
