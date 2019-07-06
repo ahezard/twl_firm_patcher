@@ -13,11 +13,10 @@ No other patch is included since this is not needed anymore
 All credits to sono
 
 Usage :
-
-Dump the twl_firm of your console using decrypt9 (SysNAND Options->Miscellanous->NCCH FIRMs Dump)
-rename it to firmware_twl.bin and put it into input.
-run go_o3ds.cmd or go_n3ds.cmd
-put the TwlBg.cxi file into luma/sysmodules (luma V6.0+ version required)
+- Dump the twl_firm of your console using decrypt9 (SysNAND Options->Miscellanous->NCCH FIRMs Dump)
+- rename it to firmware_twl.bin and put it into input.
+- run go_o3ds.cmd or go_n3ds.cmd
+- put the TwlBg.cxi file into luma/sysmodules (luma V6.0+ version required)
 
 # OBSOLETE INFO
 This modifed twlBg.cxi allows to unlock the TWL mode Hardware (DSI) into the NTR mode (DS)
