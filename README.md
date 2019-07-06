@@ -13,7 +13,8 @@ No other patch is included since this is not needed anymore
 All credits to sono
 
 Usage :
-- Dump the twl_firm of your console using decrypt9 (SysNAND Options->Miscellanous->NCCH FIRMs Dump)
+- Dump the twl_firm of your console using decrypt9 to the sd root (SysNAND Options->Miscellanous->NCCH FIRMs Dump)
+- put the sd card on your pc and look for the file TWL_FIRM_vXXXX.bin
 - rename it to firmware_twl.bin and put it into input.
 - run go.cmd
 - put the TwlBg.cxi file into luma/sysmodules (luma V6.0+ version required)
