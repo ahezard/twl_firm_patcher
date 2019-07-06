@@ -4,6 +4,14 @@ This patcher that allows to produce a special twlBg.cxi by patching the devLaunc
 
 Python 2.7 and devKitPro (msys) are required and needs to be available in the Path.
 
+# NEW INFO
+
+This modifed twlBg.cxi includes the "deblur" patch from the user sono on gbatemp
+https://gbatemp.net/threads/sharp-ds-i-mode-scaling-filters.542694/
+No other patch is included since this is not needed anymore
+All credits to him
+
+# OBSOLETE INFO
 This modifed twlBg.cxi allows to unlock the TWL mode Hardware (DSI) into the NTR mode (DS)
 
 This unlock new capability in NTR mode without breaking games:
