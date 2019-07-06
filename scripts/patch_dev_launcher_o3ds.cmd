@@ -35,7 +35,7 @@ python ..\scripts\patch_twl_bg.py --srl=code.bin --out=twlBg_patched_exefs\code.
 
 ..\tools\3dstool.exe -czvtf exefs twlBg_patched.exefs --header twlBg.exefs.header --exefs-dir twlBg_patched_exefs
 
-..\tools\3dstool.exe -cvtf cxi ..\twlBg.cxi --header twlBg.ncch.header --exh twlBg.exheader.bin --exefs twlBg_patched.exefs
+..\tools\3dstool.exe -cvtf cxi ..\TwlBg.cxi --header twlBg.ncch.header --exh twlBg.exheader.bin --exefs twlBg_patched.exefs
 
 cd ..\scripts
 pause
