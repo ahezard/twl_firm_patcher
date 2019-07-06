@@ -9,7 +9,8 @@ Python 2.7 and devKitPro (msys) are required and needs to be available in the Pa
 This modifed twlBg.cxi includes the "deblur" patch from the user sono on gbatemp
 https://gbatemp.net/threads/sharp-ds-i-mode-scaling-filters.542694/
 No other patch is included since this is not needed anymore
-All credits to him
+
+All credits to sono
 
 # OBSOLETE INFO
 This modifed twlBg.cxi allows to unlock the TWL mode Hardware (DSI) into the NTR mode (DS)
