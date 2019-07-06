@@ -15,7 +15,7 @@ All credits to sono
 Usage :
 - Dump the twl_firm of your console using decrypt9 (SysNAND Options->Miscellanous->NCCH FIRMs Dump)
 - rename it to firmware_twl.bin and put it into input.
-- run go_o3ds.cmd or go_n3ds.cmd
+- run go.cmd
 - put the TwlBg.cxi file into luma/sysmodules (luma V6.0+ version required)
 
 # OBSOLETE INFO
