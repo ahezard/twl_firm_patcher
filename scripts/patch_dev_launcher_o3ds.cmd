@@ -29,7 +29,9 @@ copy devSRLlauncher_patched_dec.nds devSRLlauncher_patched_enc.nds
 
 mkdir twlBg_patched_exefs 
 
-python ..\scripts\build_twlbg_code_from_dev_launcher_srl_o3ds.py --srl=devSRLlauncher_patched_enc.nds --code=twlBg_original_exefs\code.bin --out=twlBg_patched_exefs\code.bin 
+python ..\scripts\build_twlbg_code_from_dev_launcher_srl_o3ds.py --srl=devSRLlauncher_patched_enc.nds --code=twlBg_original_exefs\code.bin --out=code.bin
+
+python ..\scripts\patch_twl_bg.py --srl=code.bin --out=twlBg_patched_exefs\code.bin   
 
 ..\tools\3dstool.exe -czvtf exefs twlBg_patched.exefs --header twlBg.exefs.header --exefs-dir twlBg_patched_exefs
 

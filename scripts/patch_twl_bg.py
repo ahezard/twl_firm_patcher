@@ -101,21 +101,18 @@ filew = open(args.out, "wb")
 
 filesize=getSize(files)
 
-# 1st patch : ARM9 SCFG unlock
-#srlsizeoffset=0x07368
-#skipUntilAddress(files,filew,0,srlsizeoffset)
-#files.read(4)
-#filew.write("\xB8\x60\xC7\x01")
-#current=srlsizeoffset+4
+# Sono patch for deblured scaling filter : https://gbatemp.net/threads/sharp-ds-i-mode-scaling-filters.542694/
+srlsizeoffset=0x40000
+pattern= "\x00\x00\x00\x00\x00\x00\x00\x40\x00\x00\x00\x00"
+patch = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x20\x00\x40\x00\x00\x00\x20\x00\x40\x00\x40\x00\x20\x00\x00\x00\x40\x00\x20\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00" 
+mm = mmap.mmap(files.fileno(), filesize-srlsizeoffset, None,  mmap.ACCESS_READ, srlsizeoffset)
+srlsizeoffset=mm.find(pattern)
+skipUntilAddress(files,filew,0,srlsizeoffset)
+files.read(len(patch))
+filew.write(patch)
+current=srlsizeoffset+len(patch)
 
-# 2nd patch : ARM7 SCFG unlock
-#srlsizeoffset=0xA5888
-#skipUntilAddress(files,filew,current,srlsizeoffset)
-#files.read(8)
-#filew.write("\x08\x62\x86\xE3\x08\x60\x87\xE5")
-#current=srlsizeoffset+8
-
-skipUntilAddress(files,filew,0,filesize)
+skipUntilAddress(files,filew,current,filesize)
 
 filew.close()
 files.close()
